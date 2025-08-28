@@ -4,17 +4,18 @@
 #this app shows how access control is implemented
 
 
-students = ("James", "Peter", "Julie", "Jake")
+students = ["James", "Peter", "Julie", "Jake"]
 
-Username = input("Please enter User or Admin")
+Username = input("Please enter User or Admin: ")
 
-def updateList(name):
+def updateList():
     if Username == "Admin":
         students.append(name)
+        print("List updated successfully")
         print(students)
     else:
-        print("Only admins can add students to the list")
+        print("You do not have permission for this.")
 
-name = input("Please enter student name to add to the list.")
+name = input("Please enter student name to add to the list: ")
 
 updateList()
